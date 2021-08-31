@@ -688,18 +688,15 @@ div.boxCarrito div::-webkit-scrollbar-thumb {
     height: 3em;
     margin: 10px 0px;
     border: none;
-    background-color: rgb(216, 216, 216);
+    background-color: white;
 }
 
 div.datosCompra form input:focus {
-    background-color: #2098D1;
+    background-color: rgb(254, 95, 85, 0.6);
     color: white;
     border: none;
 }
 
-.datosCompra h3 {
-    color: gray;
-}
 
 .errorDatos {
     color: red;
