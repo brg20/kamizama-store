@@ -312,11 +312,11 @@ button.confirmar:hover {
     position: absolute;
 }
 
-.main_1 { background-image: url("assets/anime1.jpg");}
-.main_2 { background-image: url("assets/anime2.jpg");}
-.main_3 { background-image: url("assets/anime3.jpg");}
-.main_4 { background-image: url("assets/anime4.jpg");}
-.main_5 { background-image: url("assets/anime5.webp");}
+.main_1 { background-image: url("./assets/anime1.jpg");}
+.main_2 { background-image: url("./assets/anime2.jpg");}
+.main_3 { background-image: url("./assets/anime3.jpg");}
+.main_4 { background-image: url("./assets/anime4.jpg");}
+.main_5 { background-image: url("./assets/anime5.webp");}
 
 .contenedor_mangas {
     width: 100%;
