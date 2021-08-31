@@ -670,8 +670,8 @@ div.boxCarrito div::-webkit-scrollbar-thumb {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2000;
-    background-color: white;
-    border: 4px solid #4287f5;
+    background-color: wheat;
+    border: 4px solid white;
     border-radius: 10px;
 }
 
