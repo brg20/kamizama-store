@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5f4f906fbc.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kamizama Store</title>
+</head>
+<body>
+    
+    <!-- Box para mostrar Carrito -->
+    <div class="fondo_gris" id="fondoGris"></div>
+    <div class="box_carrito" id="boxCarrito"></div>
+
+    <!-- NAV -->
+    <div class="nav">
+        <div class="nav__titulo">
+            <h1>Kamizama Store</h1>
+        </div>
+        <div class="nav__links">
+            <a href="index.html">Home</a>
+            <a href="#tienda">Tienda</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>    
+
+    
+     <!-- Nav pantallas chicas-->
+     <div class="nav_pantalla_chica">
+        <i class="fas fa-bars"></i>&nbsp
+        <h1>Kamizama </h1>
+    </div>
+    <div class="nav__links_pantalla_chica">
+        <a href="index.html">Home</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+    
+
+    <!-- Icono del carrito con contador de items-->
+    <div class="iconoCarrito" id="iconoCarrito">
+        <i class="fas fa-shopping-cart" id="carritoIcono"></i>
+        <div class="iconoCarrito__numero" id="carritoNumero">0</div>
+    </div>
+
+    <!-- Slide -->
+    <div class="slide">
+        <div class="main main_1"></div>
+        <div class="main main_2"></div>
+        <div class="main main_3"></div>
+        <div class="main main_4"></div>
+        <div class="main main_5"></div>
+    </div>
+    <div class="logo">
+        <div class="logo_titulo">KAMIZAMA </div>
+        <div class="logo_subtitulo"> <a href="#tienda">STORE</a></div>
+    </div>
+    
+    <!-- Alerta cuando se agrega un item al carrito -->
+    <div class="alerta" id="alerta"></div>
+    
+
+    <div class="contenedor__mangas" id="tienda">
+        <div class="mangasDOM" id="mangasDOM"> </div>    
+    </div> 
+
+    
+    <div class="contacto" id="contacto">
+        <div class="hvr-sweep-to-right">
+            <h2>Contacto:</h2>
+            <p><i class="far fa-envelope"></i>  info@kamizamaStore.com</p>
+            <p><i class="fab fa-instagram"></i>  @kamizamaStore</p>
+            <p><i class="fab fa-twitter"></i>  @kamizamaStore</p>
+            <p><i class="fas fa-map-marker-alt"></i>  Bs As, Argentina</p>
+            <p></p>
+        </div>
+    </div>
+
+    
+    <!-- Datos para la compra -->
+    <div class="fondoGrisConfirmar" id="fondoGrisConfirmar"></div>
+
+    <div class="datosCompra" id="datosCompra">
+        <form action="#" method="POST">
+            <h3>Datos de facturación</h3>
+            <input type="text" placeholder="Nombre Completo" id="datosCompra_nombre" required>
+            <input type="email" placeholder="email" id="datosCompra_email" required>
+            <input type="text" placeholder="Dirección de facturación" id="datosCompra_direccion" required>
+            <input type="submit" placeholder="Siguiente" id="siguienteCompra" class="botonCompra" value="Siguiente">
+            <div id="errorDatos" class="errorDatos"></div>
+        </form>
+    </div>
+
+
+    <div class="boxMetodoDePago" id="boxMetodoDePago">
+        
+        <select name="metodo" id="selectorMetodoDePago">
+            <option value="seleccione" disabled selected>Seleccione</option>
+            <option value="TDC">Tarjeta de Crédito</option>
+            <option value="TDD">Tarjeta de Débito</option>
+            <option value="Giftcard">Giftcard</option>
+        </select>
+
+        <div class="metodoDePago" id="metodoDePago">
+
+            <form action="#" method="POST" name="TDC" id="TDC" value="TDC">
+                <input type="text" placeholder="Número de tarjeta de crédito" id="numTDC">
+                <input type="date" placeholder="Vencimiento" id="vencimientoTDC">
+                <input type="number" placeholder="Número CVV" id="cvvTDC">
+                <div id="errorDatosTDC" class="errorDatos"></div>
+                <input type="submit" placeholder="Validar datos" id="validarTDC" class="botonCompra" value="Validar tarjeta">
+            </form>
+    
+            <form action="#" method="POST" name="TDD" id="TDD" value="TDD">
+                <input type="text" placeholder="Número de tarjeta de débito" id="numTDD">
+                <input type="date" placeholder="Vencimiento" id="vencimientoTDD">
+                <input type="number" placeholder="Número CVV" id="cvvTDD">
+                <div id="errorDatosTDD" class="errorDatos"></div>
+                <input type="submit" placeholder="Validar datos" id="validarTDD" class="botonCompra" value="Validar tarjeta">
+            </form>
+    
+            <form action="#" method="POST" name="giftcard" id="giftCard" value="giftCard">
+                <input type="number" placeholder="Número de la Giftcard" id="numGC">
+                <div id="errorDatosGC" class="errorDatos"></div>
+                <input type="submit" placeholder="Validar" id="validarGC" class="botonCompra" value="Validar tarjeta">
+            </form>
+
+            <button id="cancelar" class="cancelar">Cancelar compra</button>
+        </div>
+    </div>    
+
+    <div class="confirmarDatos" id="confirmarDatos">
+        <h3>Datos de tu compra:</h3>
+        <div></div>
+        <input type="submit" placeholder="completarCompra" id="pagar" class="botonCompra" value="Pagar">
+        <button id="cancelarCompra" class="cancelar">Cancelar compra</button>
+    </div>
+
+    <div class="compraCompletada" id="compraCompletada">
+        <div class="loader"></div>
+        <p>Validando datos</p>
+        <h3>¡Gracias por tu compra!</h3>
+        <button id="salir">Salir</button>
+        <a href="compra.html" id="printFactura" target="_blank">Ver factura</a>
+    </div>
+
+        
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/stock.js"></script>
+    <script src="js/codigo.js"></script>
+    <script src="js/slide.js"></script>
+</body>
+</html>
