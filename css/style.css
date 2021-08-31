@@ -791,9 +791,9 @@ div.metodoDePago form input:focus {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2000;
-    background-color: white;
+    background-color: wheat;
     border-radius: 10px;
-    border: 2px solid #2098D1;
+    border: 2px solid wheat;
 }
 
 .confirmarDatos div {
@@ -812,7 +812,7 @@ div.metodoDePago form input:focus {
 }
 
 input.botonCompra:hover {
-    background-color: #2098D1;
+    background-color: rgb(254, 95, 85, 0.6);
     color: white;
 }
 
